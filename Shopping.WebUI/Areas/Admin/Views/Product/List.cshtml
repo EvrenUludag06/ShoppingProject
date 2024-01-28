@@ -1,0 +1,119 @@
+﻿@model List<ListProductViewModel>
+<div>
+    <div class="float-start"> <h2>Ürünler</h2> </div>
+    <div class="float-end"> <a asp-controller="Product" asp-action="New" class="btn btn-warning">Yeni Ürün</a> </div>
+</div>
+
+<div style="padding-top:75px">
+
+    <table id="productTable" class="table table-striped">
+        <thead>
+            <tr>
+                <th style="width:150px"></th>
+                <th>Ürün Adı</th>
+                <th>Birim Fiyatı</th>
+                <th>Stok Miktarı</th>
+                <th>Kategori</th>
+                <th></th>
+            </tr>
+
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @if (string.IsNullOrWhiteSpace(item.ImagePath))
+                        {
+                            <img src="~/Images/noImage.jpg" width="120" height="120" />
+                        }
+                        else
+                        {
+                            <a href="~/images/products/@item.ImagePath" data-lightbox="@item.CategoryId" data-title="@item.Name">
+
+                                <img src="~/Images/products/@item.ImagePath" width="120" height="120" />
+
+                            </a>
+                        }
+
+                    </td>
+
+                    <td>@item.Name</td>
+                    <td>@item.UnitPrice</td>
+                    <td>@item.UnitInStock</td>
+                    <td>@item.CategoryName</td>
+                    <td>
+
+                        <a asp-area="admin" asp-controller="Product" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary">Düzenle</a>
+
+                        <a class="btn btn-sm btn-danger btnDelete" href="#" data-name="sil" data-id="@item.Id">Sil</a>
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+</div>
+
+@section Scripts{
+
+    <script>
+
+        var table = new DataTable('#productTable', {
+            language: {
+                url: '//cdn.datatables.net/plug-ins/1.13.5/i18n/tr.json',
+            },
+            pageLength: 3
+        });
+
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'maxWidth': 400,
+            'maxHeight': 400,
+            'fitImagesInViewPort': true
+        })
+
+        $('.btnDelete').click(function (e) {
+
+            e.preventDefault();
+
+            var productId = $(this).data('id');
+
+            Swal.fire({
+                title: 'Emin misiniz?',
+                text: "Dikkat! Ürün silinecektir.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Evet, Onaylıyorum!',
+                cancelButtonText: 'İptal'
+            }).then((result) => {
+                if (result.isConfirmed) {
+
+                    $.ajax({
+                        url: '/admin/product/delete/' + productId,
+                        method: 'GET'
+                    }).done(function () {
+                        Swal.fire(
+                            'Silindi!',
+                            'Ürün başarıyla silindi.',
+                            'success'
+                        ).then(() => { window.location.reload() })
+                    }).fail(function () {
+                        Swal.fire(
+                            'Hata!',
+                            'Ürün silinirken bir hata ile karşılaşıldı. Silme işlemi gerçekleşemedi.',
+                            'error'
+                        )
+                    })
+                }
+            })
+        })
+    </script>
+}

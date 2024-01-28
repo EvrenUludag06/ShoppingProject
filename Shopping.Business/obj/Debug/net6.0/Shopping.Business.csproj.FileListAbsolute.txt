@@ -1,0 +1,15 @@
+C:\Users\EVREN\Desktop\My First Project\Shopping\Shopping.Business\bin\Debug\net6.0\Shopping.Business.deps.json
+C:\Users\EVREN\Desktop\My First Project\Shopping\Shopping.Business\bin\Debug\net6.0\Shopping.Business.dll
+C:\Users\EVREN\Desktop\My First Project\Shopping\Shopping.Business\bin\Debug\net6.0\Shopping.Business.pdb
+C:\Users\EVREN\Desktop\My First Project\Shopping\Shopping.Business\bin\Debug\net6.0\Shopping.Data.dll
+C:\Users\EVREN\Desktop\My First Project\Shopping\Shopping.Business\bin\Debug\net6.0\Shopping.Data.pdb
+C:\Users\EVREN\Desktop\My First Project\Shopping\Shopping.Business\obj\Debug\net6.0\Shopping.Business.csproj.AssemblyReference.cache
+C:\Users\EVREN\Desktop\My First Project\Shopping\Shopping.Business\obj\Debug\net6.0\Shopping.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EVREN\Desktop\My First Project\Shopping\Shopping.Business\obj\Debug\net6.0\Shopping.Business.AssemblyInfoInputs.cache
+C:\Users\EVREN\Desktop\My First Project\Shopping\Shopping.Business\obj\Debug\net6.0\Shopping.Business.AssemblyInfo.cs
+C:\Users\EVREN\Desktop\My First Project\Shopping\Shopping.Business\obj\Debug\net6.0\Shopping.Business.csproj.CoreCompileInputs.cache
+C:\Users\EVREN\Desktop\My First Project\Shopping\Shopping.Business\obj\Debug\net6.0\Shopping.Business.csproj.CopyComplete
+C:\Users\EVREN\Desktop\My First Project\Shopping\Shopping.Business\obj\Debug\net6.0\Shopping.Business.dll
+C:\Users\EVREN\Desktop\My First Project\Shopping\Shopping.Business\obj\Debug\net6.0\refint\Shopping.Business.dll
+C:\Users\EVREN\Desktop\My First Project\Shopping\Shopping.Business\obj\Debug\net6.0\Shopping.Business.pdb
+C:\Users\EVREN\Desktop\My First Project\Shopping\Shopping.Business\obj\Debug\net6.0\ref\Shopping.Business.dll

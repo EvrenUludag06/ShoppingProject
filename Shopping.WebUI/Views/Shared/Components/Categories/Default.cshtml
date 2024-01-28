@@ -1,0 +1,12 @@
+﻿@model List<CategoryViewModel>
+
+<div class="list-group">
+
+	<a asp-controller="Home" asp-action="Index" asp-route-categoryId="" asp-route-categoryName="" class="fw-bold list-group-item">Tüm Kategoriler</a>
+
+	@foreach (var item in Model)
+	{
+		<a asp-controller="Home" asp-action="Index" asp-route-categoryId="@item.Id" asp-route-categoryName="@item.Name" class="list-group-item">@item.Name</a>
+	}
+
+</div>

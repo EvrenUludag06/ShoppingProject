@@ -1,0 +1,47 @@
+﻿@model CategoryFormViewModel
+
+<div class="row">
+
+	<div class="col-8 offset-2">
+
+		<div class="card" style="border:solid 2px">
+
+			<div class="card-header fw-bold fs-5">
+				Kategori Formu
+			</div>
+
+			<div class="card-body">
+
+				<form method="post" asp-area="Admin" asp-controller="Category" asp-action="Save">
+
+					@if (!string.IsNullOrWhiteSpace(ViewBag.ErrorMessage))
+					{
+						<div class="alert alert-danger">
+							@ViewBag.ErrorMessage
+						</div>
+					}
+
+					<input asp-for="Id" type="hidden" />
+
+					<div class="mb-2">
+						<label asp-for="Name"></label>
+						<input asp-for="Name" type="text" class="form-control" />
+						<span class="text-danger fw-bold mt-1" asp-validation-for="Name"></span>
+					</div>
+
+					<div class="mb-2">
+						<label asp-for="Description"></label>
+						<input asp-for="Description" type="text" class="form-control" />
+					</div>
+
+					<button type="submit" class="btn btn-success mt-3 float-end">Formu Gönder</button>
+
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>

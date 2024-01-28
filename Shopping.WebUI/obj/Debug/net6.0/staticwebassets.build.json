@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "NwMBi5wuScdc13BMPpwEwoL53Qui5B0X6ZdYJgFWbss=",
+  "Source": "Shopping.WebUI",
+  "BasePath": "_content/Shopping.WebUI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Shopping.WebUI\\wwwroot",
+      "Source": "Shopping.WebUI",
+      "ContentRoot": "C:\\Users\\EVREN\\Desktop\\My First Project\\Shopping\\Shopping.WebUI\\wwwroot\\",
+      "BasePath": "_content/Shopping.WebUI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
